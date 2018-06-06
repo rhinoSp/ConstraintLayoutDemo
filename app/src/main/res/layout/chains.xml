@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.constraint.Barrier
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="style1,style2,style3,style4,style5" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#1a000000"
+        app:layout_constraintRight_toRightOf="@+id/guideline1" />
+
+    <!-- spread chain -->
+    <TextView
+        android:id="@+id/style1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="spread" />
+
+    <TextView
+        android:id="@+id/tab1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab1"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/tab2" />
+
+    <TextView
+        android:id="@+id/tab2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab2"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tab1"
+        app:layout_constraintRight_toLeftOf="@+id/tab3" />
+
+    <TextView
+        android:id="@+id/tab3"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab3"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tab2"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <!-- spread inside chain -->
+    <TextView
+        android:id="@+id/style2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="spread inside"
+        app:layout_constraintTop_toBottomOf="@+id/style1" />
+
+    <TextView
+        android:id="@+id/tab4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab4"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/tab5"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab5"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab5"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/tab4"
+        app:layout_constraintRight_toLeftOf="@+id/tab6"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <TextView
+        android:id="@+id/tab6"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab6"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@+id/tab5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab1" />
+
+    <!-- weighted chain -->
+    <TextView
+        android:id="@+id/style3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="weighted"
+        app:layout_constraintTop_toBottomOf="@+id/style2" />
+
+    <TextView
+        android:id="@+id/tab7"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab7"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/tab8"
+        app:layout_constraintTop_toBottomOf="@+id/tab4" />
+
+    <TextView
+        android:id="@+id/tab8"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab8"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/tab7"
+        app:layout_constraintRight_toLeftOf="@+id/tab9"
+        app:layout_constraintTop_toBottomOf="@+id/tab4" />
+
+    <TextView
+        android:id="@+id/tab9"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab9"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/tab8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab4" />
+
+    <!-- packed chain -->
+    <TextView
+        android:id="@+id/style4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="packed"
+        app:layout_constraintTop_toBottomOf="@+id/style3" />
+
+    <TextView
+        android:id="@+id/tab10"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab10"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/tab11"
+        app:layout_constraintTop_toBottomOf="@+id/tab7" />
+
+    <TextView
+        android:id="@+id/tab11"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab11"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab10"
+        app:layout_constraintRight_toLeftOf="@+id/tab12"
+        app:layout_constraintTop_toBottomOf="@+id/tab7" />
+
+    <TextView
+        android:id="@+id/tab12"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab12"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab11"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab7" />
+
+    <!-- packed chain with bias -->
+    <TextView
+        android:id="@+id/style5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="packed with bias"
+        app:layout_constraintTop_toBottomOf="@+id/style4" />
+
+    <TextView
+        android:id="@+id/tab13"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="tab13"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/tab14"
+        app:layout_constraintTop_toBottomOf="@+id/tab10" />
+
+    <TextView
+        android:id="@+id/tab14"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="tab14"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab13"
+        app:layout_constraintRight_toLeftOf="@+id/tab15"
+        app:layout_constraintTop_toBottomOf="@+id/tab10" />
+
+    <TextView
+        android:id="@+id/tab15"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="tab15"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@+id/tab14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab10" />
+
+
+</android.support.constraint.ConstraintLayout>
