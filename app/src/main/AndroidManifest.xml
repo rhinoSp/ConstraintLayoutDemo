@@ -20,6 +20,7 @@
         <activity android:name=".BarrierActivity"/>
         <activity android:name=".GuidelineActivity"/>
         <activity android:name=".ChainsActivity"/>
+        <activity android:name=".GroupActivity"/>
         <activity android:name=".OthersActivity"/>
 
     </application>
