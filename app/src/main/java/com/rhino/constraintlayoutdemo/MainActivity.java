@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mHolderDataList.add(buildHolderData("chains", ChainsActivity.class));
         mHolderDataList.add(buildHolderData("group", GroupActivity.class));
         mHolderDataList.add(buildHolderData("Placeholder", PlaceholderActivity.class));
+        mHolderDataList.add(buildHolderData("CircularPositioning", CircularPositioningActivity.class));
         mHolderDataList.add(buildHolderData("others", OthersActivity.class));
         adapter.updateDataAndNotify(mHolderDataList);
     }
