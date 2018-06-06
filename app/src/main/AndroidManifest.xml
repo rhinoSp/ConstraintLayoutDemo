@@ -21,6 +21,7 @@
         <activity android:name=".GuidelineActivity"/>
         <activity android:name=".ChainsActivity"/>
         <activity android:name=".GroupActivity"/>
+        <activity android:name=".PlaceholderActivity"/>
         <activity android:name=".OthersActivity"/>
 
     </application>

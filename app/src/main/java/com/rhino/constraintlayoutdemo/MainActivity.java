@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mHolderDataList.add(buildHolderData("guideline", GuidelineActivity.class));
         mHolderDataList.add(buildHolderData("chains", ChainsActivity.class));
         mHolderDataList.add(buildHolderData("group", GroupActivity.class));
+        mHolderDataList.add(buildHolderData("Placeholder", PlaceholderActivity.class));
         mHolderDataList.add(buildHolderData("others", OthersActivity.class));
         adapter.updateDataAndNotify(mHolderDataList);
     }
