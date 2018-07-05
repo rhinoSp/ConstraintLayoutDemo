@@ -23,6 +23,7 @@
         <activity android:name=".GroupActivity"/>
         <activity android:name=".PlaceholderActivity"/>
         <activity android:name=".CircularPositioningActivity"/>
+        <activity android:name=".ConstraintSetActivity"/>
         <activity android:name=".OthersActivity"/>
 
     </application>
