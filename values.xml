@@ -12,111 +12,111 @@
     <attr format="boolean" name="chainUseRtl"/>
     <attr format="reference" name="constraintSet"/>
     <attr format="string" name="constraint_referenced_ids"/> <!-- 是用来包含形成Barrier的视图ID列表 -->
-    <attr format="reference" name="content"/>
-    <attr name="emptyVisibility">
+    <attr format="reference" name="content"/> <!-- PlaceHolder的属性，指定实际控件id -->
+    <attr name="emptyVisibility"> <!-- PlaceHolder的属性，用于没有设置内容那么同样想显示的情况? -->
         <enum name="gone" value="0"/>
         <enum name="invisible" value="1"/>
     </attr>
-    <attr format="boolean" name="layout_constrainedHeight"/>
-    <attr format="boolean" name="layout_constrainedWidth"/>
-    <attr format="integer" name="layout_constraintBaseline_creator"/>
-    <attr format="reference|enum" name="layout_constraintBaseline_toBaselineOf">
+    <attr format="boolean" name="layout_constrainedHeight"/> <!-- 在ConstraintLayout中，仍然可以对WRAP_CONTENT的最大尺寸进行约束，可以通过layout_constrainedHeight设置是否约束控件高度 -->
+    <attr format="boolean" name="layout_constrainedWidth"/> <!-- 在ConstraintLayout中，仍然可以对WRAP_CONTENT的最大尺寸进行约束，可以通过layout_constrainedHeight设置是否约束控件宽度 -->
+    <attr format="integer" name="layout_constraintBaseline_creator"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
+    <attr format="reference|enum" name="layout_constraintBaseline_toBaselineOf"> <!-- 文字的底部线对齐，用于含文本的控件对齐基线 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="integer" name="layout_constraintBottom_creator"/>
-    <attr format="reference|enum" name="layout_constraintBottom_toBottomOf">
+    <attr format="integer" name="layout_constraintBottom_creator"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
+    <attr format="reference|enum" name="layout_constraintBottom_toBottomOf"> <!-- 下边底部对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference|enum" name="layout_constraintBottom_toTopOf">
+    <attr format="reference|enum" name="layout_constraintBottom_toTopOf">  <!-- 下边顶部对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference" name="layout_constraintCircle"/>
-    <attr format="integer" name="layout_constraintCircleAngle"/>
-    <attr format="dimension" name="layout_constraintCircleRadius"/>
-    <attr format="string" name="layout_constraintDimensionRatio"/>
-    <attr format="reference|enum" name="layout_constraintEnd_toEndOf">
+    <attr format="reference" name="layout_constraintCircle"/> <!-- 设置圆心控件 -->
+    <attr format="integer" name="layout_constraintCircleAngle"/> <!-- 设置控件角度 -->
+    <attr format="dimension" name="layout_constraintCircleRadius"/> <!-- 设置半径 -->
+    <attr format="string" name="layout_constraintDimensionRatio"/> <!-- 宽高比"2:1"、"H,2:1"或"W,2:1" -->
+    <attr format="reference|enum" name="layout_constraintEnd_toEndOf"> <!-- 尾部向尾部对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference|enum" name="layout_constraintEnd_toStartOf">
+    <attr format="reference|enum" name="layout_constraintEnd_toStartOf"> <!-- 尾部向起始边对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="dimension" name="layout_constraintGuide_begin"/>
-    <attr format="dimension" name="layout_constraintGuide_end"/>
-    <attr format="float" name="layout_constraintGuide_percent"/>
-    <attr name="layout_constraintHeight_default">
+    <attr format="dimension" name="layout_constraintGuide_begin"/> <!-- 距离屏幕开始尺寸，如：100dp -->
+    <attr format="dimension" name="layout_constraintGuide_end"/> <!-- 距离屏幕结束尺寸，如：100dp -->
+    <attr format="float" name="layout_constraintGuide_percent"/> <!-- 距离屏幕开始比例，如：0.85 -->
+    <attr name="layout_constraintHeight_default"> <!-- 默认值为spread，占用所有的符合约束的空间；如果取值为Wrap，并且view 的尺寸设置为 wrap_content 且受所设置的约束限制其尺寸，则这个view最终尺寸不会超出约束的范围 -->
         <enum name="spread" value="0"/>
         <enum name="wrap" value="1"/>
         <enum name="percent" value="2"/>
     </attr>
-    <attr format="dimension|enum" name="layout_constraintHeight_max">
+    <attr format="dimension|enum" name="layout_constraintHeight_max"> <!-- 控件最大高度 -->
         <enum name="wrap" value="-2"/>
     </attr>
-    <attr format="dimension|enum" name="layout_constraintHeight_min">
+    <attr format="dimension|enum" name="layout_constraintHeight_min">  <!-- 控件最小高度 -->
         <enum name="wrap" value="-2"/>
     </attr>
-    <attr format="float" name="layout_constraintHeight_percent"/>
-    <attr format="float" name="layout_constraintHorizontal_bias"/>
-    <attr format="enum" name="layout_constraintHorizontal_chainStyle">
+    <attr format="float" name="layout_constraintHeight_percent"/> <!-- 高相对于父容器的百分比 -->
+    <attr format="float" name="layout_constraintHorizontal_bias"/> <!-- 左边空白占屏幕的权重 -->
+    <attr format="enum" name="layout_constraintHorizontal_chainStyle"> <!-- Chains的属性，横向，默认spread -->
         <enum name="spread" value="0"/>
         <enum name="spread_inside" value="1"/>
         <enum name="packed" value="2"/>
     </attr>
-    <attr format="float" name="layout_constraintHorizontal_weight"/>
-    <attr format="integer" name="layout_constraintLeft_creator"/>
+    <attr format="float" name="layout_constraintHorizontal_weight"/> <!-- 根据所设置的权重来分配控件所占的空间 -->
+    <attr format="integer" name="layout_constraintLeft_creator"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
     <attr format="reference|enum" name="layout_constraintLeft_toLeftOf">
         <enum name="parent" value="0"/>
     </attr>
     <attr format="reference|enum" name="layout_constraintLeft_toRightOf">
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="integer" name="layout_constraintRight_creator"/>
-    <attr format="reference|enum" name="layout_constraintRight_toLeftOf">
+    <attr format="integer" name="layout_constraintRight_creator"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
+    <attr format="reference|enum" name="layout_constraintRight_toLeftOf"> <!-- 右边左对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference|enum" name="layout_constraintRight_toRightOf">
+    <attr format="reference|enum" name="layout_constraintRight_toRightOf"> <!-- 右边右对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference|enum" name="layout_constraintStart_toEndOf">
+    <attr format="reference|enum" name="layout_constraintStart_toEndOf"> <!-- 起始边向尾部对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference|enum" name="layout_constraintStart_toStartOf">
+    <attr format="reference|enum" name="layout_constraintStart_toStartOf"> <!-- 起始边向起始边对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="integer" name="layout_constraintTop_creator"/>
-    <attr format="reference|enum" name="layout_constraintTop_toBottomOf">
+    <attr format="integer" name="layout_constraintTop_creator"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
+    <attr format="reference|enum" name="layout_constraintTop_toBottomOf"> <!-- 上边底部对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="reference|enum" name="layout_constraintTop_toTopOf">
+    <attr format="reference|enum" name="layout_constraintTop_toTopOf"> <!-- 上边顶部对齐 -->
         <enum name="parent" value="0"/>
     </attr>
-    <attr format="float" name="layout_constraintVertical_bias"/>
-    <attr format="enum" name="layout_constraintVertical_chainStyle">
+    <attr format="float" name="layout_constraintVertical_bias"/> <!-- 顶部空白占屏幕的权重 -->
+    <attr format="enum" name="layout_constraintVertical_chainStyle"> <!-- Chains的属性，纵向，默认spread -->
         <enum name="spread" value="0"/>
         <enum name="spread_inside" value="1"/>
         <enum name="packed" value="2"/>
     </attr>
-    <attr format="float" name="layout_constraintVertical_weight"/>
-    <attr name="layout_constraintWidth_default">
+    <attr format="float" name="layout_constraintVertical_weight"/> <!-- 根据所设置的权重来分配控件所占的空间 -->
+    <attr name="layout_constraintWidth_default"> <!-- 默认值为spread，占用所有的符合约束的空间；如果取值为Wrap，并且view 的尺寸设置为 wrap_content 且受所设置的约束限制其尺寸，则这个view最终尺寸不会超出约束的范围 -->
         <enum name="spread" value="0"/>
         <enum name="wrap" value="1"/>
         <enum name="percent" value="2"/>
     </attr>
-    <attr format="dimension|enum" name="layout_constraintWidth_max">
+    <attr format="dimension|enum" name="layout_constraintWidth_max"> <!-- 控件最大宽度 -->
         <enum name="wrap" value="-2"/>
     </attr>
-    <attr format="dimension|enum" name="layout_constraintWidth_min">
+    <attr format="dimension|enum" name="layout_constraintWidth_min"> <!-- 控件最小高度 -->
         <enum name="wrap" value="-2"/>
     </attr>
-    <attr format="float" name="layout_constraintWidth_percent"/>
-    <attr format="dimension" name="layout_editor_absoluteX"/>
-    <attr format="dimension" name="layout_editor_absoluteY"/>
-    <attr format="dimension" name="layout_goneMarginBottom"/>
-    <attr format="dimension" name="layout_goneMarginEnd"/>
-    <attr format="dimension" name="layout_goneMarginLeft"/>
-    <attr format="dimension" name="layout_goneMarginRight"/>
-    <attr format="dimension" name="layout_goneMarginStart"/>
-    <attr format="dimension" name="layout_goneMarginTop"/>
-    <attr name="layout_optimizationLevel">
+    <attr format="float" name="layout_constraintWidth_percent"/> <!-- 宽相对于父容器的百分比 -->
+    <attr format="dimension" name="layout_editor_absoluteX"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
+    <attr format="dimension" name="layout_editor_absoluteY"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
+    <attr format="dimension" name="layout_goneMarginBottom"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->
+    <attr format="dimension" name="layout_goneMarginEnd"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->
+    <attr format="dimension" name="layout_goneMarginLeft"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->
+    <attr format="dimension" name="layout_goneMarginRight"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->
+    <attr format="dimension" name="layout_goneMarginStart"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->
+    <attr format="dimension" name="layout_goneMarginTop"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->
+    <attr name="layout_optimizationLevel"> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
         <flag name="none" value="0"/>
         <flag name="standard" value="3"/> <!-- for now only direct & barriers -->
         <flag name="direct" value="1"/>
