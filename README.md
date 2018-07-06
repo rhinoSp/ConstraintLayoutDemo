@@ -255,7 +255,8 @@ public class ConstraintSetActivity extends AppCompatActivity {
     }
 }
 ```
-接下来我们看下运行效果：
+接下来我们看下运行效果：<br>
+![constraintset](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/constraintset.gif)<br>
 
 
 # Question / Contact Me / Hire Me
