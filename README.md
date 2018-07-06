@@ -10,6 +10,7 @@ dependencies {
 ```
 # 三、属性介绍
 ## 1. 常用属性
+下面是常用属性，更多参见：[values.xml](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/Other/values.xml)
 ```
 layout_constraintLeft_toLeftOf          // 左边左对齐
 layout_constraintLeft_toRightOf         // 左边右对齐
