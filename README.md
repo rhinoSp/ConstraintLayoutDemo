@@ -51,9 +51,9 @@ Barrier是一个看不见的视图，如果其引用形成Barrier的视图的大
 </attr>
 <attr format="string" name="constraint_referenced_ids"/>  <!-- 是用来包含形成Barrier的视图ID列表 -->
 ```
-## 3. Guidelines 
+## 3. Guideline 
 Guidelines可以简化视图布局的对齐方式，特别是如果您在许多元素上重复使用了相同的边界值。Guidelines可以是垂直或水平的，可以指定一个开始的dp值和结束的dp值或者可以相对于屏幕的百分比。使用方法见下面的栗子：<br>
-![guidelines](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/guidelines.png)<br>
+![guideline](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/guidelines.png)<br>
 ```xml
 <android.support.constraint.Guideline
         android:id="@+id/guideline1"

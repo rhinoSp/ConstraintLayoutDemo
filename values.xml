@@ -54,7 +54,7 @@
     <attr format="dimension|enum" name="layout_constraintHeight_min">  <!-- 控件最小高度 -->
         <enum name="wrap" value="-2"/>
     </attr>
-    <attr format="float" name="layout_constraintHeight_percent"/> <!-- 高相对于父容器的百分比 -->
+    <attr format="float" name="layout_constraintHeight_percent"/> <!-- 高相对于父容器的百分比，设置layout_height="0px"时生效 -->
     <attr format="float" name="layout_constraintHorizontal_bias"/> <!-- 左边空白占屏幕的权重 -->
     <attr format="enum" name="layout_constraintHorizontal_chainStyle"> <!-- Chains的属性，横向，默认spread -->
         <enum name="spread" value="0"/>
@@ -107,7 +107,7 @@
     <attr format="dimension|enum" name="layout_constraintWidth_min"> <!-- 控件最小高度 -->
         <enum name="wrap" value="-2"/>
     </attr>
-    <attr format="float" name="layout_constraintWidth_percent"/> <!-- 宽相对于父容器的百分比 -->
+    <attr format="float" name="layout_constraintWidth_percent"/> <!-- 宽相对于父容器的百分比，设置layout_width="0px"时生效 -->
     <attr format="dimension" name="layout_editor_absoluteX"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
     <attr format="dimension" name="layout_editor_absoluteY"/> <!-- UI 编辑器所使用的，用了辅助拖拽布局的，在实际使用过程中，可以不用关心这些属性 -->
     <attr format="dimension" name="layout_goneMarginBottom"/> <!-- 当前 View 所参考的 View 状态为 GONE 的时候的 margin 值 -->

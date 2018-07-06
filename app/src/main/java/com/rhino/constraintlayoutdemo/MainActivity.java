@@ -37,14 +37,15 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());
         binding.recyclerView.setLayoutManager(manager);
 
-        mHolderDataList.add(buildHolderData("barrier", BarrierActivity.class));
-        mHolderDataList.add(buildHolderData("guideline", GuidelineActivity.class));
-        mHolderDataList.add(buildHolderData("chains", ChainsActivity.class));
-        mHolderDataList.add(buildHolderData("group", GroupActivity.class));
+
+        mHolderDataList.add(buildHolderData("Normal", NormalActivity.class));
+        mHolderDataList.add(buildHolderData("Barrier", BarrierActivity.class));
+        mHolderDataList.add(buildHolderData("Guideline", GuidelineActivity.class));
+        mHolderDataList.add(buildHolderData("Chains", ChainsActivity.class));
+        mHolderDataList.add(buildHolderData("Group", GroupActivity.class));
         mHolderDataList.add(buildHolderData("Placeholder", PlaceholderActivity.class));
         mHolderDataList.add(buildHolderData("CircularPositioning", CircularPositioningActivity.class));
         mHolderDataList.add(buildHolderData("ConstraintSet", ConstraintSetActivity.class));
-        mHolderDataList.add(buildHolderData("others", OthersActivity.class));
         adapter.updateDataAndNotify(mHolderDataList);
     }
 
