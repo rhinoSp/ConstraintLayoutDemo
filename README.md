@@ -28,7 +28,7 @@ layout_constraintDimensionRatio         // 宽高比"2:1"、"H,2:1"或"W,2:1"
 ```
 ## 2. Barrier
 Barrier是一个看不见的视图，如果其引用形成Barrier的视图的大小或位置发生变化，则Barrier将其大小调整为所引用视图的最大高度或宽度。就像一个屏障一样，阻止一个或者多个控件越过自己，当某个控件要越过自己的时候，Barrier会自动移动，避免自己被覆盖。Barrier可以是垂直或水平的，并且可以创建到引用视图的顶部、底部、左侧或右侧。以下示例可以看出，当调整控件flow1和flow2的大小或位置时，左侧Barrier（竖线阴影）调整其位置。这里的控件see约束在一左一右两个Barrier的正中，为了更好地体现Barrier的位置变化。
-![barrier](https://github.com/rhinoSp/ConstraintLayoutDemo/tree/master/ScreenCapture/barrier.gif)
+![barrier](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/barrier.gif)
 ```xml
 <android.support.constraint.Barrier
         android:id="@+id/id_barrier1"
