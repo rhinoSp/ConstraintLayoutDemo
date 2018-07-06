@@ -5,7 +5,7 @@
 ```
 dependencies {
     ...
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }
 ```
 # 三、属性介绍
@@ -27,8 +27,8 @@ layout_constraintBaseline_toBaselineOf  // 文字的底部线对齐，用于含�
 layout_constraintDimensionRatio         // 宽高比"2:1"、"H,2:1"或"W,2:1"
 ```
 ## 2. Barrier
-Barrier是一个看不见的视图，如果其引用形成Barrier的视图的大小或位置发生变化，则Barrier将其大小调整为所引用视图的最大高度或宽度。就像一个屏障一样，阻止一个或者多个控件越过自己，当某个控件要越过自己的时候，Barrier会自动移动，避免自己被覆盖。Barrier可以是垂直或水平的，并且可以创建到引用视图的顶部、底部、左侧或右侧。以下示例可以看出，当调整控件flow1和flow2的大小或位置时，左侧Barrier（竖线阴影）调整其位置。这里的控件see约束在一左一右两个Barrier的正中，为了更好地体现Barrier的位置变化。  
-![barrier](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/barrier.gif)
+Barrier是一个看不见的视图，如果其引用形成Barrier的视图的大小或位置发生变化，则Barrier将其大小调整为所引用视图的最大高度或宽度。就像一个屏障一样，阻止一个或者多个控件越过自己，当某个控件要越过自己的时候，Barrier会自动移动，避免自己被覆盖。Barrier可以是垂直或水平的，并且可以创建到引用视图的顶部、底部、左侧或右侧。以下示例可以看出，当调整控件flow1和flow2的大小或位置时，左侧Barrier（竖线阴影）调整其位置。这里的控件see约束在一左一右两个Barrier的正中，为了更好地体现Barrier的位置变化。<br>
+![barrier](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/barrier.gif)<br>
 ```xml
 <android.support.constraint.Barrier
         android:id="@+id/id_barrier1"
@@ -52,8 +52,8 @@ Barrier是一个看不见的视图，如果其引用形成Barrier的视图的大
 <attr format="string" name="constraint_referenced_ids"/>  <!-- 是用来包含形成Barrier的视图ID列表 -->
 ```
 ## 3. Guidelines 
-Guidelines可以简化视图布局的对齐方式，特别是如果您在许多元素上重复使用了相同的边界值。Guidelines可以是垂直或水平的，可以指定一个开始的dp值和结束的dp值或者可以相对于屏幕的百分比。使用方法见下面的栗子：  
-![guidelines](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/guidelines.png)
+Guidelines可以简化视图布局的对齐方式，特别是如果您在许多元素上重复使用了相同的边界值。Guidelines可以是垂直或水平的，可以指定一个开始的dp值和结束的dp值或者可以相对于屏幕的百分比。使用方法见下面的栗子：<br>
+![guidelines](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/guidelines.png)<br>
 ```xml
 <android.support.constraint.Guideline
         android:id="@+id/guideline1"
@@ -69,8 +69,8 @@ Guidelines可以简化视图布局的对齐方式，特别是如果您在许多�
 <attr format="float" name="layout_constraintGuide_percent"/> <!-- 距离屏幕开始比例，如：0.85 -->
 ```
 ## 4. Chains
-Chains 链是一种特殊的约束让多个 chains 链连接的 Views 能够平分剩余空间位置。在 Android 传统布局特性里面最相似的应该是 LinearLayout 中的权重比 weight ，但 Chains 链能做到的远远不止权重比 weight 的功能。使用方法见下面的栗子：  
-![chains](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/chains.png)
+Chains 链是一种特殊的约束让多个 chains 链连接的 Views 能够平分剩余空间位置。在 Android 传统布局特性里面最相似的应该是 LinearLayout 中的权重比 weight ，但 Chains 链能做到的远远不止权重比 weight 的功能。使用方法见下面的栗子：<br>
+![chains](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/chains.png)<br>
 这里体现了Chains的常规用法，详情见[chains.xml](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/app/src/main/res/layout/chains.xml)。下面是这里用到的attr介绍：
 ```
 <attr format="enum" name="layout_constraintHorizontal_chainStyle"> <!-- 横向，默认spread -->
@@ -153,8 +153,8 @@ Placeholder就是用来一个占位的东西，它可以把自己的内容设置
  
 </layout>
 ```
-当点击change的时候在代码里面动态修改PlaceHolder的contentId为text，效果如下：  
-![placeholder](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/placeholder.gif)
+当点击change的时候在代码里面动态修改PlaceHolder的contentId为text，效果如下：<br>
+![placeholder](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/placeholder.gif)<br>
 ## 7. Circular Positioning
 Circular Positioning顾名思义，它可以约束一个view相对于另一个view的弧度和半径。我们直接来看使用方法，如下：
 ```xml
@@ -191,8 +191,8 @@ Circular Positioning顾名思义，它可以约束一个view相对于另一个vi
  
 </layout>
 ```
-这里定义了一个ImageView，约束为以TextView为圆心，90dp半径，120度角。然后在activity中不停地改变ImageView的角度，就能看到ImageView绕TextView旋转。如果没有ConstraintLayout的这个新功能的话，你可能会用自定义view来实现。效果如下：  
-![circularpositioning](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/circularpositioning.gif)
+这里定义了一个ImageView，约束为以TextView为圆心，90dp半径，120度角。然后在activity中不停地改变ImageView的角度，就能看到ImageView绕TextView旋转。如果没有ConstraintLayout的这个新功能的话，你可能会用自定义view来实现。效果如下：<br>
+![circularpositioning](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/circularpositioning.gif)<br>
 ## 7. ConstraintSet
 ConstraintSet能使我们在代码中轻松地改变控件的位置大小，再也不用LayoutParams了。。我们直接来看使用方法，很简单，我们直接看[ConstraintSetActivity.java](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/app/src/main/java/com/rhino/constraintlayoutdemo/ConstraintSetActivity.java)代码，如下：（这里省略布局代码，详情见：[constraint_set.xml](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/app/src/main/res/layout/constraint_set.xml)）
 ```java
