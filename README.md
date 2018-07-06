@@ -194,7 +194,7 @@ Circular Positioning顾名思义，它可以约束一个view相对于另一个vi
 ```
 这里定义了一个ImageView，约束为以TextView为圆心，90dp半径，120度角。然后在activity中不停地改变ImageView的角度，就能看到ImageView绕TextView旋转。如果没有ConstraintLayout的这个新功能的话，你可能会用自定义view来实现。效果如下：<br>
 ![circularpositioning](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/ScreenCapture/circularpositioning.gif)<br>
-## 7. ConstraintSet
+## 8. ConstraintSet
 ConstraintSet能使我们在代码中轻松地改变控件的位置大小，再也不用LayoutParams了。。我们直接来看使用方法，很简单，我们直接看[ConstraintSetActivity.java](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/app/src/main/java/com/rhino/constraintlayoutdemo/ConstraintSetActivity.java)代码，如下：（这里省略布局代码，详情见：[constraint_set.xml](https://github.com/rhinoSp/ConstraintLayoutDemo/blob/master/app/src/main/res/layout/constraint_set.xml)）
 ```java
 package com.rhino.constraintlayoutdemo;
