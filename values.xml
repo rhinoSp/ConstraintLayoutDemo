@@ -11,9 +11,9 @@
     </attr>
     <attr format="boolean" name="chainUseRtl"/>
     <attr format="reference" name="constraintSet"/>
-    <attr format="string" name="constraint_referenced_ids"/> <!-- 是用来包含形成Barrier的视图ID列表 -->
+    <attr format="string" name="constraint_referenced_ids"/> <!-- 是用来包含形成Group,Barrier的视图ID列表 -->
     <attr format="reference" name="content"/> <!-- PlaceHolder的属性，指定实际控件id -->
-    <attr name="emptyVisibility"> <!-- PlaceHolder的属性，用于没有设置内容那么同样想显示的情况? -->
+    <attr name="emptyVisibility"> <!-- PlaceHolder的属性，用于没有设置内容没有同样想显示的情况? -->
         <enum name="gone" value="0"/>
         <enum name="invisible" value="1"/>
     </attr>
